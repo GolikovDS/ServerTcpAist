@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ServerTcpAist:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="ServerTcpAist-1.0.war">
+      <element id="artifact" artifact-name="ServerTcpAist:war exploded" />
+    </root>
+  </artifact>
+</component>
