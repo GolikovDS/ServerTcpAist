@@ -13,6 +13,7 @@ public class SocketRunnable implements Runnable, Serializable {
 
     final static Logger LOGGER = Logger.getLogger(SocketRunnable.class);
 
+
     private Socket socket;
     private static AIST aist = new AIST();
 
@@ -34,6 +35,7 @@ public class SocketRunnable implements Runnable, Serializable {
             socket.setSoTimeout(3000);
 
             while (true) {
+
                 AistXmlEntity aistXmlEntity = JAXB.unmarshal(new StringReader(bufferedReader.readLine()), AistXmlEntity.class);
                 aist = aist.getAistState(aistXmlEntity.getState());
                 LOGGER.debug(aist.toString() + "--------->" + Thread.currentThread().getName());
